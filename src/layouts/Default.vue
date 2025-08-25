@@ -1,0 +1,427 @@
+<template>
+  <div class="layout">
+    <header id="headerNav">
+      <b-navbar
+        id="nav"
+        class="nav transparent"
+        toggleable="lg"
+        type="light"
+        variant="white"
+        fixed="top"
+      >
+        <b-container>
+          <b-navbar-brand href="/" class="d-flex align-items-center">
+            <div class="d-flex align-items-center">
+              <g-image
+                class="nav__logo-img"
+                src="~/assets/img/logo1.jpg"
+                alt="Logo"
+                immediate
+              />
+              <span class="nav__logo-text mt-2">PT Gasko Jaya</span>
+            </div>
+            <g-image
+              class="nav__secondary-logo mt-2"
+              src="~/assets/img/iso.png"
+              alt="Iso Logo"
+              immediate
+            />
+          </b-navbar-brand>
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav class="ml-auto">
+              <b-nav-item
+                class="nav__item"
+                href="/"
+                :active="$route.path == '/'"
+                >Home</b-nav-item
+              >
+
+              <b-nav-item
+                class="nav__item"
+                href="/about/info"
+                :active="$route.path == '/about/info'"
+                >About Us</b-nav-item
+              >
+
+              <!-- <b-nav-item-dropdown class="nav__item" right text="About Us">
+                <b-dropdown-item
+                  class="text-center"
+                  href="/about/info"
+                  :active="$route.path == '/about/info'"
+                  >Info</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-center"
+                  href="/about/legal"
+                  :active="$route.path == '/about/legal'"
+                >
+                  Legal
+                  <span class="d-none d-lg-inline">&#10097;</span>
+                  <ClientOnly>
+                    <div class="sub-menu">
+                      <b-nav-item
+                        class="text-center"
+                        href="/about/legal#npwp"
+                        :active="$route.fullPath == '/about/legal#npwp'"
+                        >NPWP</b-nav-item
+                      >
+                      <b-nav-item
+                        class="text-center"
+                        href="/about/legal#tdp"
+                        :active="$route.fullPath == '/about/legal#tdp'"
+                        >TDP</b-nav-item
+                      >
+                      <b-nav-item
+                        class="text-center"
+                        href="/about/legal#siup"
+                        :active="$route.fullPath == '/about/legal#siup'"
+                        >SIUP</b-nav-item
+                      >
+                    </div>
+                  </ClientOnly>
+                </b-dropdown-item>
+              </b-nav-item-dropdown> -->
+
+              <b-nav-item-dropdown class="nav__item" right text="Products">
+                <b-dropdown-item
+                  class="text-left"
+                  :active="$route.path.includes('/products/pillar-seal')"
+                  >Pillar Seal Solutions</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/pillar-seal/mechanical-seal"
+                  :active="
+                    $route.path.includes(
+                      '/products/pillar-seal/mechanical-seal'
+                    )
+                  "
+                  >Mechanical Seal</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/pillar-seal/gaskets"
+                  :active="
+                    $route.path.includes('/products/pillar-seal/gaskets')
+                  "
+                  >Gaskets</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/pillar-seal/gland-packings"
+                  :active="
+                    $route.path.includes('/products/pillar-seal/gland-packings')
+                  "
+                  >Gland Packings</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left"
+                  :active="$route.path.includes('/products/tanken-seal')"
+                  >Tanken Seal</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/tanken-seal/mechanical-seal"
+                  :active="
+                    $route.path.includes(
+                      '/products/tanken-seal/mechanical-seal'
+                    )
+                  "
+                  >Mechanical Seal</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/tanken-seal/abc-seal"
+                  :active="
+                    $route.path.includes('/products/tanken-seal/abc-seal')
+                  "
+                  >ABC Seal</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/tanken-seal/carbon-products"
+                  :active="
+                    $route.path.includes(
+                      '/products/tanken-seal/carbon-products'
+                    )
+                  "
+                  >Carbon Products</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/tanken-seal/porous-carbon-pad"
+                  :active="
+                    $route.path.includes(
+                      '/products/tanken-seal/porous-carbon-pad'
+                    )
+                  "
+                  >Porous Carbon Pad</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/tanken-seal/sv-dispatch"
+                  :active="
+                    $route.path.includes('/products/tanken-seal/sv-dispatch')
+                  "
+                  >SV Dispatch</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/tanken-seal/vacuum-chamber"
+                  :active="
+                    $route.path.includes('/products/tanken-seal/vacuum-chamber')
+                  "
+                  >Vacuum Chamber</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left"
+                  :active="$route.path.includes('/products/createc')"
+                  >Createc</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/createc/sealing-technology"
+                  :active="
+                    $route.path.includes('/products/createc/sealing-technology')
+                  "
+                  >Sealing Technology</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-left pl-5"
+                  href="/products/createc/pump-bearing"
+                  :active="
+                    $route.path.includes('/products/createc/pump-bearing')
+                  "
+                  >Pump Bearing</b-dropdown-item
+                >
+              </b-nav-item-dropdown>
+
+              <!-- <b-nav-item-dropdown class="nav__item" right text="Services">
+                <b-dropdown-item
+                  class="text-center"
+                  href="/services/seal"
+                  :active="$route.path == '/services/seal'"
+                  >Mechanical Seal Repair</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-center"
+                  href="/services/vessel"
+                  :active="$route.path == '/services/vessel'"
+                  >Vessel Reservoir Repair</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-center"
+                  href="/services/pump"
+                  :active="$route.path == '/services/pump'"
+                  >Submersible Pump Rental</b-dropdown-item
+                >
+                <b-dropdown-item
+                  class="text-center"
+                  href="/services/pump2"
+                  :active="$route.path == '/services/pump2'"
+                  >Hydrotest Pump Rental</b-dropdown-item
+                >
+              </b-nav-item-dropdown> -->
+
+              <b-nav-item
+                class="nav__item"
+                href="/contacts"
+                :active="$route.path == '/contacts'"
+                >Contact Us</b-nav-item
+              >
+            </b-navbar-nav>
+          </b-collapse>
+        </b-container>
+      </b-navbar>
+    </header>
+    <div class="body">
+      <slot />
+      <a
+        href="https://wa.me/+6281372622285"
+        class="whatsapp-fab"
+        target="_blank"
+      >
+        <g-image src="~/assets/img/WhatsApp.svg" alt="WhatsApp" />
+      </a>
+    </div>
+    <footer class="footer" id="footerContact">
+      <div class="footer__bottom">
+        &copy; {{ thisYear }} GASKO All Rights Reserved.
+      </div>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  computed: {
+    thisYear() {
+      const dt = new Date();
+      return dt.getUTCFullYear();
+    }
+  },
+  mounted() {
+    const nav = document.getElementById("nav");
+
+    function navToSolid() {
+      if (window.pageYOffset > 50) {
+        nav.classList.remove("transparent");
+      } else {
+        nav.classList.add("transparent");
+      }
+    }
+
+    window.onscroll = function() {
+      navToSolid();
+    };
+  }
+};
+</script>
+
+<style lang="scss">
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body {
+  flex-grow: 1;
+}
+
+.nav {
+  transition: all 0.5s;
+
+  &.transparent {
+    @media only screen and (min-width: 992px) {
+      background-color: rgba(#fff, 0) !important;
+    }
+  }
+
+  & &__logo-img {
+    height: 4rem;
+    width: auto;
+  }
+  & &__secondary-logo {
+    max-width: 100px;
+    margin-top: 5px;
+  }
+  & &__item {
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1.5rem;
+
+    @media only screen and (max-width: 1200px) {
+      padding: 1rem;
+    }
+
+    ul {
+      background-color: var(--primary);
+
+      a {
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--primary);
+          background-color: var(--light);
+        }
+
+        &.active {
+          color: var(--primary);
+          background-color: var(--light);
+        }
+
+        position: relative;
+
+        .sub-menu {
+          visibility: hidden;
+          position: absolute;
+          left: 100%;
+          top: 0;
+          background-color: var(--primary-dark);
+
+          @media only screen and (max-width: 992px) {
+            visibility: visible;
+            position: relative;
+            left: 0;
+          }
+
+          a {
+            color: #fff;
+
+            &:hover,
+            &:focus,
+            &:active {
+              color: var(--primary-dark);
+              background-color: var(--light);
+            }
+
+            &.active {
+              color: var(--primary-dark);
+              background-color: var(--light);
+            }
+          }
+        }
+        &:hover .sub-menu {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+
+  & &__bottom {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    background-color: var(--secondary);
+    color: #fff;
+  }
+}
+
+.whatsapp-fab {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-fab img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-fab:hover {
+  background-color: #20b659;
+  cursor: pointer;
+}
+
+.whatsapp-fab:active {
+  background-color: #1a9453;
+}
+</style>

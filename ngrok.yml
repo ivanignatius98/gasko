@@ -1,0 +1,8 @@
+version: 2
+
+tunnels:
+  gasko:
+    proto: http
+    addr: http://gasko:8080
+
+authtoken: 2XRE1W5q4qW5Nxvc0D811wjNpXr_7So3Ryak7XDVHFp47E7io

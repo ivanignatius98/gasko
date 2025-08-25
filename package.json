@@ -1,0 +1,19 @@
+{
+	"name": "gasko",
+	"private": true,
+	"scripts": {
+		"start": "npm run develop",
+		"build": "gridsome build",
+		"develop": "gridsome develop",
+		"explore": "gridsome explore"
+	},
+	"dependencies": {
+		"bootstrap-vue": "^2.5.0",
+		"gridsome": "^0.7.23",
+		"vue-carousel": "^0.18.0"
+	},
+	"devDependencies": {
+		"node-sass": "^4.13.1",
+		"sass-loader": "^8.0.2"
+	}
+}

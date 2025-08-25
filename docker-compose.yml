@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+# create gridsome cli service that uses image instead of docker file
+  gridsome:
+    image: crowdcode/gridsome-cli:latest
+    container_name: gasko
+    volumes:
+      - .:/workspace
+    ports:
+      - 8080:8080
+    command: ["gridsome", "develop"]
