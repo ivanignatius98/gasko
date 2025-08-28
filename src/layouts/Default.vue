@@ -44,185 +44,186 @@
                 >About Us</b-nav-item
               >
 
-              <!-- <b-nav-item-dropdown class="nav__item" right text="About Us">
-                <b-dropdown-item
-                  class="text-center"
-                  href="/about/info"
-                  :active="$route.path == '/about/info'"
-                  >Info</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-center"
-                  href="/about/legal"
-                  :active="$route.path == '/about/legal'"
-                >
-                  Legal
-                  <span class="d-none d-lg-inline">&#10097;</span>
-                  <ClientOnly>
-                    <div class="sub-menu">
-                      <b-nav-item
-                        class="text-center"
-                        href="/about/legal#npwp"
-                        :active="$route.fullPath == '/about/legal#npwp'"
-                        >NPWP</b-nav-item
+              <b-nav-item-dropdown
+                class="nav__item nav__item--products"
+                right
+                text="Products"
+              >
+                <div class="products-dropdown-container">
+                  <!-- Left Column -->
+                  <div class="products-column">
+                    <div class="product-section">
+                      <b-dropdown-item
+                        class="text-left product-category"
+                        :active="$route.path.includes('/products/pillar-seal')"
+                        >Pillar Seal Solutions</b-dropdown-item
                       >
-                      <b-nav-item
-                        class="text-center"
-                        href="/about/legal#tdp"
-                        :active="$route.fullPath == '/about/legal#tdp'"
-                        >TDP</b-nav-item
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/pillar-seal/mechanical-seal"
+                        :active="
+                          $route.path.includes(
+                            '/products/pillar-seal/mechanical-seal'
+                          )
+                        "
+                        >Mechanical Seal</b-dropdown-item
                       >
-                      <b-nav-item
-                        class="text-center"
-                        href="/about/legal#siup"
-                        :active="$route.fullPath == '/about/legal#siup'"
-                        >SIUP</b-nav-item
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/pillar-seal/gaskets"
+                        :active="
+                          $route.path.includes('/products/pillar-seal/gaskets')
+                        "
+                        >Gaskets</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/pillar-seal/gland-packings"
+                        :active="
+                          $route.path.includes(
+                            '/products/pillar-seal/gland-packings'
+                          )
+                        "
+                        >Gland Packings</b-dropdown-item
                       >
                     </div>
-                  </ClientOnly>
-                </b-dropdown-item>
-              </b-nav-item-dropdown> -->
 
-              <b-nav-item-dropdown class="nav__item" right text="Products">
-                <b-dropdown-item
-                  class="text-left"
-                  :active="$route.path.includes('/products/pillar-seal')"
-                  >Pillar Seal Solutions</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/pillar-seal/mechanical-seal"
-                  :active="
-                    $route.path.includes(
-                      '/products/pillar-seal/mechanical-seal'
-                    )
-                  "
-                  >Mechanical Seal</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/pillar-seal/gaskets"
-                  :active="
-                    $route.path.includes('/products/pillar-seal/gaskets')
-                  "
-                  >Gaskets</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/pillar-seal/gland-packings"
-                  :active="
-                    $route.path.includes('/products/pillar-seal/gland-packings')
-                  "
-                  >Gland Packings</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left"
-                  :active="$route.path.includes('/products/tanken-seal')"
-                  >Tanken Seal</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/tanken-seal/mechanical-seal"
-                  :active="
-                    $route.path.includes(
-                      '/products/tanken-seal/mechanical-seal'
-                    )
-                  "
-                  >Mechanical Seal</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/tanken-seal/abc-seal"
-                  :active="
-                    $route.path.includes('/products/tanken-seal/abc-seal')
-                  "
-                  >ABC Seal</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/tanken-seal/carbon-products"
-                  :active="
-                    $route.path.includes(
-                      '/products/tanken-seal/carbon-products'
-                    )
-                  "
-                  >Carbon Products</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/tanken-seal/porous-carbon-pad"
-                  :active="
-                    $route.path.includes(
-                      '/products/tanken-seal/porous-carbon-pad'
-                    )
-                  "
-                  >Porous Carbon Pad</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/tanken-seal/sv-dispatch"
-                  :active="
-                    $route.path.includes('/products/tanken-seal/sv-dispatch')
-                  "
-                  >SV Dispatch</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/tanken-seal/vacuum-chamber"
-                  :active="
-                    $route.path.includes('/products/tanken-seal/vacuum-chamber')
-                  "
-                  >Vacuum Chamber</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left"
-                  :active="$route.path.includes('/products/createc')"
-                  >Createc</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/createc/sealing-technology"
-                  :active="
-                    $route.path.includes('/products/createc/sealing-technology')
-                  "
-                  >Sealing Technology</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-left pl-5"
-                  href="/products/createc/pump-bearing"
-                  :active="
-                    $route.path.includes('/products/createc/pump-bearing')
-                  "
-                  >Pump Bearing</b-dropdown-item
-                >
+                    <div class="product-section">
+                      <b-dropdown-item
+                        class="text-left product-category"
+                        :active="$route.path.includes('/products/tanken-seal')"
+                        >Tanken Seal</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/tanken-seal/mechanical-seal"
+                        :active="
+                          $route.path.includes(
+                            '/products/tanken-seal/mechanical-seal'
+                          )
+                        "
+                        >Mechanical Seal</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/tanken-seal/abc-seal"
+                        :active="
+                          $route.path.includes('/products/tanken-seal/abc-seal')
+                        "
+                        >ABC Seal</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/tanken-seal/carbon-products"
+                        :active="
+                          $route.path.includes(
+                            '/products/tanken-seal/carbon-products'
+                          )
+                        "
+                        >Carbon Products</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/tanken-seal/porous-carbon-pad"
+                        :active="
+                          $route.path.includes(
+                            '/products/tanken-seal/porous-carbon-pad'
+                          )
+                        "
+                        >Porous Carbon Pad</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/tanken-seal/sv-dispatch"
+                        :active="
+                          $route.path.includes(
+                            '/products/tanken-seal/sv-dispatch'
+                          )
+                        "
+                        >SV Dispatch</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/tanken-seal/vacuum-chamber"
+                        :active="
+                          $route.path.includes(
+                            '/products/tanken-seal/vacuum-chamber'
+                          )
+                        "
+                        >Vacuum Chamber</b-dropdown-item
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Right Column -->
+                  <div class="products-column">
+                    <div class="product-section">
+                      <b-dropdown-item
+                        class="text-left product-category"
+                        :active="$route.path.includes('/products/createc')"
+                        >Createc</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/createc/sealing-technology"
+                        :active="
+                          $route.path.includes(
+                            '/products/createc/sealing-technology'
+                          )
+                        "
+                        >Sealing Technology</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/createc/pump-bearing"
+                        :active="
+                          $route.path.includes('/products/createc/pump-bearing')
+                        "
+                        >Pump Bearing</b-dropdown-item
+                      >
+                    </div>
+
+                    <div class="product-section">
+                      <b-dropdown-item
+                        class="text-left product-category"
+                        href="/products/bray"
+                        :active="$route.path.includes('/products/bray')"
+                        >Bray</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/bray/valves"
+                        :active="
+                          $route.path.includes(
+                            '/products/bray/valves'
+                          )
+                        "
+                        >Valves</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/bray/activators"
+                        :active="
+                          $route.path.includes(
+                            '/products/bray/activators'
+                          )
+                        "
+                        >Activators</b-dropdown-item
+                      >
+                      <b-dropdown-item
+                        class="text-left product-subcategory"
+                        href="/products/bray/accessories"
+                        :active="
+                          $route.path.includes(
+                            '/products/bray/accessories'
+                          )
+                        "
+                        >Accessories</b-dropdown-item
+                      >
+                    </div>
+                  </div>
+                </div>
               </b-nav-item-dropdown>
-
-              <!-- <b-nav-item-dropdown class="nav__item" right text="Services">
-                <b-dropdown-item
-                  class="text-center"
-                  href="/services/seal"
-                  :active="$route.path == '/services/seal'"
-                  >Mechanical Seal Repair</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-center"
-                  href="/services/vessel"
-                  :active="$route.path == '/services/vessel'"
-                  >Vessel Reservoir Repair</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-center"
-                  href="/services/pump"
-                  :active="$route.path == '/services/pump'"
-                  >Submersible Pump Rental</b-dropdown-item
-                >
-                <b-dropdown-item
-                  class="text-center"
-                  href="/services/pump2"
-                  :active="$route.path == '/services/pump2'"
-                  >Hydrotest Pump Rental</b-dropdown-item
-                >
-              </b-nav-item-dropdown> -->
 
               <b-nav-item
                 class="nav__item"
@@ -377,6 +378,103 @@ body {
         }
       }
     }
+
+    // Enhanced Products Dropdown Styles
+    &--products {
+      .dropdown-menu {
+        min-width: 500px;
+        padding: 0;
+
+        @media only screen and (max-width: 992px) {
+          min-width: auto;
+        }
+      }
+    }
+  }
+}
+
+// Products Dropdown Layout
+.products-dropdown-container {
+  display: flex;
+  min-width: 500px;
+
+  @media only screen and (max-width: 992px) {
+    flex-direction: column;
+    min-width: auto;
+  }
+}
+
+.products-column {
+  flex: 1;
+  padding: 0.5rem 0;
+
+  &:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 1rem;
+
+    @media only screen and (max-width: 992px) {
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-right: 0;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &:last-child {
+    padding-left: 1rem;
+
+    @media only screen and (max-width: 992px) {
+      padding-left: 0;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.product-section {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.product-category {
+  font-weight: 700;
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--light) !important;
+    color: var(--primary) !important;
+  }
+
+  &.active {
+    background-color: var(--light) !important;
+    color: var(--primary) !important;
+  }
+}
+
+.product-subcategory {
+  font-weight: 400;
+  padding-left: 1.5rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--light) !important;
+    color: var(--primary) !important;
+  }
+
+  &.active {
+    background-color: var(--light) !important;
+    color: var(--primary) !important;
   }
 }
 
