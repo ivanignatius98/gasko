@@ -18,14 +18,29 @@
                 alt="Logo"
                 immediate
               />
-              <span class="nav__logo-text mt-2">PT Gasko Jaya</span>
+              <span class="nav__logo-text">PT Gasko Jaya</span>
             </div>
-            <g-image
-              class="nav__secondary-logo mt-2"
-              src="~/assets/img/iso.png"
-              alt="Iso Logo"
-              immediate
-            />
+            <div class="separator mx-3"></div>
+            <div class="iso-logos-container d-flex align-items-center">
+              <g-image
+                class="nav__secondary-logo"
+                src="~/assets/img/iso/iso-1.webp"
+                alt="Iso Logo"
+                immediate
+              />
+              <g-image
+                class="nav__secondary-logo"
+                src="~/assets/img/iso/iso-2.webp"
+                alt="Iso Logo"
+                immediate
+              />
+              <g-image
+                class="nav__secondary-logo"
+                src="~/assets/img/iso/iso-3.webp"
+                alt="Iso Logo"
+                immediate
+              />
+            </div>
           </b-navbar-brand>
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
           <b-collapse id="nav-collapse" is-nav>
@@ -193,20 +208,14 @@
                       <b-dropdown-item
                         class="text-left product-subcategory"
                         href="/products/bray/valves"
-                        :active="
-                          $route.path.includes(
-                            '/products/bray/valves'
-                          )
-                        "
+                        :active="$route.path.includes('/products/bray/valves')"
                         >Valves</b-dropdown-item
                       >
                       <b-dropdown-item
                         class="text-left product-subcategory"
                         href="/products/bray/activators"
                         :active="
-                          $route.path.includes(
-                            '/products/bray/activators'
-                          )
+                          $route.path.includes('/products/bray/activators')
                         "
                         >Activators</b-dropdown-item
                       >
@@ -214,9 +223,7 @@
                         class="text-left product-subcategory"
                         href="/products/bray/accessories"
                         :active="
-                          $route.path.includes(
-                            '/products/bray/accessories'
-                          )
+                          $route.path.includes('/products/bray/accessories')
                         "
                         >Accessories</b-dropdown-item
                       >
@@ -310,9 +317,26 @@ body {
     height: 4rem;
     width: auto;
   }
+  & &__logo-text {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-left: 1.5rem;
+
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
   & &__secondary-logo {
-    max-width: 100px;
-    margin-top: 5px;
+    max-height: 4rem;
+    width: auto;
+  }
+  .separator {
+    width: 1px;
+    height: 3rem;
+    background-color: #e9ecef;
+  }
+  .iso-logos-container {
+    gap: 0.5rem;
   }
   & &__item {
     position: relative;
