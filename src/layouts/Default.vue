@@ -201,7 +201,6 @@
                     <div class="product-section">
                       <b-dropdown-item
                         class="text-left product-category"
-                        href="/products/bray"
                         :active="$route.path.includes('/products/bray')"
                         >Bray</b-dropdown-item
                       >
@@ -214,17 +213,13 @@
                       <b-dropdown-item
                         class="text-left product-subcategory"
                         href="/products/bray/activators"
-                        :active="
-                          $route.path.includes('/products/bray/activators')
-                        "
+                        :active="$route.path.includes('/products/bray/activators')"
                         >Activators</b-dropdown-item
                       >
                       <b-dropdown-item
                         class="text-left product-subcategory"
                         href="/products/bray/accessories"
-                        :active="
-                          $route.path.includes('/products/bray/accessories')
-                        "
+                        :active="$route.path.includes('/products/bray/accessories')"
                         >Accessories</b-dropdown-item
                       >
                     </div>
